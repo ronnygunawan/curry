@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Ronny Gunawan</Authors>
+    <Company>Ronny Gunawan</Company>
+    <Description>Currying in C#</Description>
+    <Copyright>(c) 2019 Ronny Gunawan</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/ronnygunawan/curry</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ronnygunawan/curry</RepositoryUrl>
+    <PackageTags>curry</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageId>RG.Curry</PackageId>
+    <Product>RG.Curry</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="Curry.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Curry.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Curry.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Curry.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>
