@@ -2,13 +2,16 @@
 <#@ assembly name="System.Core" #>
 <#@ output extension=".cs" #>
 namespace System {
+	[Obsolete("Use Func<>.Curry() instead.")]
 	public static class Curry {
 <# for (int i = 1; i <= 16; i++) { #>
+		[Obsolete("Use Func<>.Curry() instead.")]
 		public static Curry<<# for (int j = 1; j <= i; j++) { #>T<#= j #>, <# } #>TResult> From<<# for (int j = 1; j <= i; j++) { #>T<#= j #>, <# } #>TResult>(Func<<# for (int j = 1; j <= i; j++) { #>T<#= j #>, <# } #>TResult> func) => func;
 <# } #>
 	}
-
 <# for (int i = 1; i <= 16; i++) { #>
+
+	[Obsolete("Use Func<>.Curry() instead.")]
 	public class Curry<<# for (int j = 1; j <= i; j++) { #>T<#= j #>, <# } #>TResult> {
 		private Func<<# for (int j = 1; j <= i; j++) { #>T<#= j #>, <# } #>TResult> Func { get; }
 

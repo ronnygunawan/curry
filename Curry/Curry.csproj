@@ -14,12 +14,34 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageId>RG.Curry</PackageId>
     <Product>RG.Curry</Product>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="ActionCurryExtensions.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ActionCurryExtensions.tt</DependentUpon>
+    </None>
+    <None Include="FuncCurryExtensions.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>FuncCurryExtensions.tt</DependentUpon>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ActionCurryExtensions.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ActionCurryExtensions.cs</LastGenOutput>
+    </None>
     <None Update="Curry.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Curry.cs</LastGenOutput>
+    </None>
+    <None Update="FuncCurryExtensions.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>FuncCurryExtensions.cs</LastGenOutput>
     </None>
   </ItemGroup>
 
