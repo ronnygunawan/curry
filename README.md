@@ -17,7 +17,7 @@ var result4 = func.Curry(1).Curry(2).Curry(3)();
 ## Works on Action too
 
 ```cs
-Action<string, object> writeLine = (format, arg1) => Console.WriteLine(format, arg1);
+Action<string, object> writeLine = Console.WriteLine;
 var writeHello = writeLine.Curry("Hello {0}");
 writeHello("World");
 ```
